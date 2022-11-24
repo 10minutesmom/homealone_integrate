@@ -78,11 +78,11 @@ def time_parser(start_time,end_time):
 
 #file_open = open("file path", 'r', encoding="UTF-8")
 def schedule_All(uid):
-   file_path = r"C:\Users\조세연\Desktop\bin\schedule_origin.json"
-   with open(file_path, 'r',encoding='UTF-8') as file:
-      data = json.load(file)
-      #print(type(data))
-   return JsonResponse(data)
+    file_path = r"/home/ai01/ai_se_integrate/repo/homealone_API/schedule_JSON/schedule_origin.json"
+    with open(file_path, 'r',encoding='UTF-8') as file:
+        data = json.load(file)
+        #print(type(data))
+        return JsonResponse(data)
 
 #def schedule_recent(uid):
    #file_path = r"C:\Users\조세연\myproject\Scripts\my_django_project\my_api\schedule.json"
