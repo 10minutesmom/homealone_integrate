@@ -5,7 +5,7 @@ import numpy as np
 video_capture = cv2.VideoCapture(0)
 
 # 검색 할 샘플 사진을 로드 후 인코딩
-Youngseo_image = face_recognition.load_image_file("asset/images/Youngseo.jpg")
+Youngseo_image = face_recognition.load_image_file("./Youngseo.jpg")
 Youngseo_face_encoding = face_recognition.face_encodings(Youngseo_image)[0]
 
 # 검색 할 얼굴 인코딩 및 이름 배열 생성

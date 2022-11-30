@@ -104,7 +104,7 @@ class ScheduleViewSet(viewsets.ModelViewSet):
 def schedule_All_recent(request):
     if request.method=='POST':
         body=json.loads(request.body.decode('UTF-8'))
-        file_path = r"C:\Users\조세연\Desktop\bin\schedule_origin.json"
+        file_path = r"/home/ai01/ai_se_integrate/repo/homealone_API/schedule_JSON/schedule_origin.json"
         with open(file_path,"w")as outfile:
             json.dump(body,outfile,ensure_ascii=False)
         return HttpResponse(body)
@@ -116,7 +116,7 @@ def schedule_All_recent(request):
 def schedule_add(request):
    if request.method=='POST':
       body=json.loads(request.body.decode('UTF-8'))
-      file_path = r"C:\Users\조세연\Desktop\bin\schedule_origin.json"#file path of schedule data
+      file_path = r"/home/ai01/ai_se_integrate/repo/homealone_API/schedule_JSON/schedule_origin.json"#file path of schedule data
       with open(file_path,'r',encoding='UTF-8')as file:
          data=json.load(file) #LOAD DATASET
 
@@ -147,7 +147,7 @@ def schedule_add(request):
 def schedule_modify(request):#Load->delete->insert
    if request.method=='POST':
       body=json.loads(request.body.decode('UTF-8'))
-      file_path = r"C:\Users\조세연\Desktop\bin\schedule_origin.json"#file path of schedule data
+      file_path = r"/home/ai01/ai_se_integrate/repo/homealone_API/schedule_JSON/schedule_origin.json"#file path of schedule data
       with open(file_path,'r',encoding='UTF-8')as file:
          data=json.load(file) #LOAD DATASET
 
@@ -199,7 +199,7 @@ def schedule_modify(request):#Load->delete->insert
 def schedule_delete(request):#Load->delete->insert
    if request.method=='POST':
       body=json.loads(request.body.decode('UTF-8'))
-      file_path = r"C:\Users\조세연\Desktop\bin\schedule_origin.json"#file path of schedule data
+      file_path = r"/home/ai01/ai_se_integrate/repo/homealone_API/schedule_JSON/schedule_origin.json"#file path of schedule data
       with open(file_path,'r',encoding='UTF-8')as file:
          data=json.load(file) #LOAD DATASET
 
@@ -228,7 +228,7 @@ def schedule_delete(request):#Load->delete->insert
 @api_view(['GET'])
 def schedule_recent(request):
    if request.method=='GET':
-      file_path = r"C:\Users\조세연\Desktop\bin\schedule_origin.json"
+      file_path = r"/home/ai01/ai_se_integrate/repo/homealone_API/schedule_JSON/schedule_origin.json"
       with open(file_path, 'r',encoding='UTF-8') as file:
          data = json.load(file)
       now=datetime.now()
